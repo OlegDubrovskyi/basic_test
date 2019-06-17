@@ -1,7 +1,7 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
-    baseUrl: 'https://www.ng-book.com/',
+    baseUrl: 'https://www.ng-book.com',
 
     capabilities: {
         browserName: 'chrome',

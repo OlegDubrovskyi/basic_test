@@ -2,8 +2,7 @@ import {MainPagePo} from "../support/main-page.po";
 import {BuyFormPo} from "../support/buy-form.po";
 import {PreviewFormPo} from "../support/preview-form.po";
 import { expect } from "chai"
-import {$, $$, browser, element, ExpectedConditions, protractor} from "protractor";
-import {async} from "q";
+import {$, browser, ExpectedConditions, protractor} from "protractor";
 const mainPage = new MainPagePo();
 const buyForm = new BuyFormPo();
 const previewForm= new PreviewFormPo();
@@ -40,10 +39,9 @@ describe('', async ()=> {
         });
     });
 
-    fit('When user clicks on “Get it” btn, then Purchasing popup shown with fields ',  async () => {
+    it('When user clicks on “Get it” btn, then Purchasing popup shown with fields ',  async () => {
         mainPage.introLink.click();
         for (let i = 0; i < await mainPage.priceGetButton.count(); i++) {
-            // await browser.wait(ExpectedConditions.visibilityOf(mainPage.priceGetButton.get(i)), 5000);
             mainPage.priceGetButton.get(i).click();
             await browser.switchTo().frame($('iframe.gumroad-overlay-iframe').getWebElement());
             await browser.wait(ExpectedConditions.elementToBeClickable(buyForm.emailField), 5000);
