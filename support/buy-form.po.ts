@@ -1,6 +1,5 @@
 import {BaseComponent} from "./base.component";
-import {$$, ElementArrayFinder, ElementFinder, $} from "protractor";
-import {expect} from "chai";
+import {ElementFinder, $} from "protractor";
 
 export class BuyFormPo extends BaseComponent{
 
@@ -13,12 +12,12 @@ export class BuyFormPo extends BaseComponent{
     closeBuyForm: ElementFinder= $('.buy-form-main  .close');
 
     async verifyCardsFields(priceValue: string) {
-        expect(await this.emailField.isDisplayed()).to.be.true;
-        expect(await this.cardNumberField.isDisplayed()).to.equal(true);
-        expect(await this.expiryDate.isDisplayed()).to.equal(true);
-        expect(await this.cvCodeField.isDisplayed()).to.equal(true);
-        expect(await this.fullNameField.isDisplayed()).to.equal(true);
-        expect(await this.price.getText()).to.equal('$' + priceValue);
-        expect(await this.closeBuyForm.isDisplayed()).to.equal(true);
+        expect(await this.emailField.isDisplayed()).toBeTruthy();
+        expect(await this.cardNumberField.isDisplayed()).toBeTruthy();
+        expect(await this.expiryDate.isDisplayed()).toBeTruthy();
+        expect(await this.cvCodeField.isDisplayed()).toBeTruthy();
+        expect(await this.fullNameField.isDisplayed()).toBeTruthy();
+        expect(await this.price.getText()).toContain('$' + priceValue);
+        expect(await this.closeBuyForm.isDisplayed()).toBeTruthy();
     }
 }

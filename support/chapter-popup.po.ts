@@ -1,5 +1,5 @@
 import {BaseComponent} from "./base.component";
-import {$, $$, ElementArrayFinder, ElementFinder} from "protractor";
+import {$, ElementFinder} from "protractor";
 
 export class ChapterPopupPo extends BaseComponent{
 

@@ -1,0 +1,5 @@
+Run e2e tests:
+
+1. npm i
+2. npm run pree2e
+3. npm run e2e-tests

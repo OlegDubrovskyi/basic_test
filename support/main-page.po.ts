@@ -6,9 +6,8 @@ export class MainPagePo extends BaseComponent{
     pageUrl = '/';
 
     headerLinks: ElementArrayFinder= $$('.nav a');
-    bannerLink: ElementFinder= $('.banner');
+    bannerLink: ElementFinder= $('.banner a');
     introLink: ElementFinder= $('.intro a');
-    packagesSection: ElementFinder= $('.intro a');
     pricePlans: ElementArrayFinder= $$('.pricing-table span');
     priceGetButton: ElementArrayFinder = $$('.pricing-table .getit');
 }

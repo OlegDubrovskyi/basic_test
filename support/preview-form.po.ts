@@ -1,6 +1,5 @@
 import {BaseComponent} from "./base.component";
-import {$$, ElementArrayFinder, ElementFinder, $} from "protractor";
-import {expect} from "chai";
+import {ElementFinder, $} from "protractor";
 
 export class PreviewFormPo extends BaseComponent{
     price: ElementFinder= $('.price');

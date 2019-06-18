@@ -17,6 +17,10 @@ exports.config = {
         defaultTimeoutInterval: 60000,
     },
 
+    localSeleniumStandaloneOpts: {
+        loopback: true
+    },
+
     onPrepare: function () {
         require('ts-node').register({
             project: 'tsconfig.json'
