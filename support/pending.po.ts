@@ -1,5 +1,5 @@
-import {BaseComponent} from "./base.component";
-import {$, $$, ElementArrayFinder, ElementFinder} from "protractor";
+import {BaseComponent} from './base.component';
+import {$, $$, ElementArrayFinder, ElementFinder} from 'protractor';
 
 export class PendingPo extends BaseComponent{
 

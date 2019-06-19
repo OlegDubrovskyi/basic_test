@@ -1,4 +1,4 @@
-import {browser, ElementFinder, ExpectedConditions} from "protractor";
+import {browser, ElementFinder, ExpectedConditions} from 'protractor';
 
 export abstract class BaseComponent {
     abstract pageUrl: string;
@@ -7,8 +7,8 @@ export abstract class BaseComponent {
         await browser.get(this.pageUrl);
     }
 
-    getTitle() {
-        return browser.getTitle();
+     getTitle() {
+        return   browser.driver.getTitle();
     }
 
     async scrollTo(element: ElementFinder) {
